@@ -1,8 +1,8 @@
 #Lab 4
 #Alex Huen
 #Project Euler Problems
-
-#Problem 1
+'''
+#Problem 1 (done)
 #create an empty list to house all the multiples
 list = []
 #the following for statement returns all values divisible by 3 or 5
@@ -14,7 +14,7 @@ answer = sum(list)
 print(list)
 print(answer)
 
-#Problem 2
+#Problem 2 (done)
 #these first 2 values must be given in order to do this problem
 n1 = 0
 n2 = 1
@@ -33,8 +33,10 @@ while True:
 #the answer adds all of the numbers in the sequence
 answer = sum(fibList)
 print(answer)
-
-#Problem 3
+'''
+'''
+#Problem 3 (done)
+'''
 '''
 The code below is a brute force algorithm. Since the value is too large, it takes too long to work
 facList = []
@@ -45,7 +47,7 @@ for i in range(1, x+1):
 answer = sum(facList)
 print(answer)
 '''
-
+'''
 def LargePrimeFactor(n):
     #set largest prime factor to 0 as a placeholder
     LPF = 0
@@ -69,7 +71,7 @@ def LargePrimeFactor(n):
 print(LargePrimeFactor(600851475143))
 
 
-#Problem 4
+#Problem 4 (done)
 #def PalinddromeProduct(n):
 n = 0
 #the x value is found by decreasing order from largest 3 digit number to smallest 3 digit number
@@ -86,10 +88,23 @@ for x in range(999,100,-1):
             if StringProduct == StringProduct[::-1]:
                 n = x*y
 print(n)
+'''
+#Problem 5 (not finished)
+#gcd is greatest common denominator
+def gcd(x,y):
+    if x>y:
+        smallerV = y
+    else:
+        smallerV = x
+        for i in range()
+def lcm():
+    answer = 1
+    for i in range(1,n+1):
 
-#Problem 5
 
-#Problem 6
+
+'''
+#Problem 6 (done)
 #the following 3 are just placeholder values
 SumOfSquare = 0
 SquareOfSum = 0
@@ -103,14 +118,16 @@ SquareOfSum = Sum**2
 #we do the calculations in the "print" command, which is the difference of the 2 values
 print(SquareOfSum - SumOfSquare)
 
-#Problem 7
+#Problem 7 (not finished)
 
 primeNumList = []
 primeNumList.append(2)
 while len(primeNumList) <10001:
-    for i in range
+    for i in range(2,10001,2):
 
-#Problem 8
+'''
+'''
+#Problem 8 (done)
 #the series of numbers for the problem
 NumSeries = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"
 #amount of numbers we want to multiply
@@ -129,8 +146,9 @@ for i in range(0, len(NumSeries) - length +1):
     if Answer < tempAnswer:
         Answer = tempAnswer
 print(Answer)
-
-#Problem 9
+'''
+'''
+#Problem 9 (done)
 #we start of with 3 since that is the min value for a pythag. thriple
 for a in range(3, 1000):
     for b in range(a + 1, 1000):
@@ -141,3 +159,8 @@ for a in range(3, 1000):
         if a + b + c == 1000:
             Answer = a * b * c
 print(Answer)
+'''
+#PRoblem 10
+#need help with prime numbers
+
+#problem 11
