@@ -33,8 +33,8 @@ while True:
 #the answer adds all of the numbers in the sequence
 answer = sum(fibList)
 print(answer)
-'''
-'''
+
+
 #Problem 3 (done)
 '''
 '''
@@ -88,8 +88,25 @@ for x in range(999,100,-1):
             if StringProduct == StringProduct[::-1]:
                 n = x*y
 print(n)
+
+#Problem 5 (done)
+#the following numlist as been modified to eliminate any "repeated" factors
+#for instance, the factors of 14 expluding 14 itself are "1", "2", "7"
+#therefore, we can remove them all
+numList = [11,12,13,14,15,16,17,18,19,20]
+#for the range function, we start at 20, with intervals of 20, up to 999999999
+#we start at 20 because the LCM of the set of numbers need to be at least the same or larger than the largest number in the smallest
+#the step size is 20 because multiples of 20 goes up by "20"
+for i in range(20, 999999999, 20):
+    #all() will return true or false, so the code only proceeds of the i values filfills the conditions
+    if all(i%j==0 for j in numList):
+        #afterwards the i values that passes will be our answer
+        print(i)
+        #the code is written so that it will find any of the multiples starting with the first one
+        #exit() will "exit" the code after it finds the first answer
+        exit()
 '''
-#Problem 5 (not finished)
+'''
 #gcd is greatest common denominator
 def gcd(x,y):
     if x>y:
@@ -100,7 +117,7 @@ def gcd(x,y):
 def lcm():
     answer = 1
     for i in range(1,n+1):
-
+'''
 
 
 '''
@@ -117,15 +134,20 @@ for i in range(1,101):
 SquareOfSum = Sum**2
 #we do the calculations in the "print" command, which is the difference of the 2 values
 print(SquareOfSum - SumOfSquare)
-
+'''
 #Problem 7 (not finished)
+
+#def find_nth_prime():
 
 primeNumList = []
 primeNumList.append(2)
 while len(primeNumList) <10001:
-    for i in range(2,10001,2):
+    for i in range(3,10001,2):
+        if all(i%j!=0 for j in range(2,1+int(i**0.5))):
+            primeNumList.append(i)
+            print(primeNumList)
 
-'''
+
 '''
 #Problem 8 (done)
 #the series of numbers for the problem
@@ -146,8 +168,8 @@ for i in range(0, len(NumSeries) - length +1):
     if Answer < tempAnswer:
         Answer = tempAnswer
 print(Answer)
-'''
-'''
+
+
 #Problem 9 (done)
 #we start of with 3 since that is the min value for a pythag. thriple
 for a in range(3, 1000):
@@ -159,6 +181,7 @@ for a in range(3, 1000):
         if a + b + c == 1000:
             Answer = a * b * c
 print(Answer)
+
 '''
 #PRoblem 10
 #need help with prime numbers
