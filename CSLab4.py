@@ -1,7 +1,7 @@
 #Lab 4
 #Alex Huen
 #Project Euler Problems
-'''
+
 #Problem 1 (done)
 #create an empty list to house all the multiples
 list = []
@@ -36,7 +36,7 @@ print(answer)
 
 
 #Problem 3 (done)
-'''
+
 '''
 The code below is a brute force algorithm. Since the value is too large, it takes too long to work
 facList = []
@@ -47,7 +47,7 @@ for i in range(1, x+1):
 answer = sum(facList)
 print(answer)
 '''
-'''
+
 def LargePrimeFactor(n):
     #set largest prime factor to 0 as a placeholder
     LPF = 0
@@ -134,21 +134,43 @@ for i in range(1,101):
 SquareOfSum = Sum**2
 #we do the calculations in the "print" command, which is the difference of the 2 values
 print(SquareOfSum - SumOfSquare)
-'''
-#Problem 7 (not finished)
+
+Problem 7 (not finished)
 
 #def find_nth_prime():
-
+'''
+#unused
 primeNumList = []
 primeNumList.append(2)
 while len(primeNumList) <10001:
     for i in range(3,10001,2):
+        #if all(i%j!=0 for i in range(2,int((num)**0.5)+1)):
         if all(i%j!=0 for j in range(2,1+int(i**0.5))):
             primeNumList.append(i)
             print(primeNumList)
-
-
 '''
+
+
+#this temp number will keep increasing until it reaches our answer
+tempNth = 2
+#for loop to keep finding the prime number based on its position
+for i in range(3,10000000, 2):
+    #this place
+    j = 1
+    while j*j < i:
+        #keep adding 2 to the j value to shorten calculation time
+        j = j+2
+        #the following will eliminate even numbers
+        if i % j == 0:
+            break
+        else:
+            #keep adding 1 to the nth term for testing
+            tempNth = tempNth + 1
+        #print the corresponding answer when n = 100001
+        if tempNth == 100001:
+            print(i)
+
+
 #Problem 8 (done)
 #the series of numbers for the problem
 NumSeries = "7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450"
@@ -181,9 +203,3 @@ for a in range(3, 1000):
         if a + b + c == 1000:
             Answer = a * b * c
 print(Answer)
-
-'''
-#PRoblem 10
-#need help with prime numbers
-
-#problem 11
